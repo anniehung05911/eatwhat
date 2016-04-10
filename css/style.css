@@ -7,7 +7,6 @@ body {
     background: url(../images/background.jpg) center center fixed no-repeat;
     background-size: cover;
     background-color: #ffffcc;
-    
 }
 
 header img {
@@ -28,6 +27,7 @@ header img {
 article .container {
     width: 800px;
     height: 375px;
+    position: relative;
 }
 
 article .container>* {
@@ -45,7 +45,6 @@ article img {
 article .container>div {
     width: 6%;
     height: inherit;
-    
 }
 
 article .midline {
@@ -53,4 +52,20 @@ article .midline {
     width: 17%;
     height: inherit;
     margin: auto;
+}
+
+article .container>.or-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #ed7d31;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    line-height:100px;
+    text-align:center;
+    color: white;
+    font-size: 300%;
 }
