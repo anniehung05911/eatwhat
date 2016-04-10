@@ -1,0 +1,23 @@
+body {
+    margin:0;
+    padding:0;
+    background: url(../images/background.jpg) center center fixed no-repeat;
+    background-size: cover;
+    background-color: #ffffcc;
+    
+}
+
+header img {
+    display:block;
+    margin: auto;
+    height:auto;
+    width: auto;
+    max-height: auto;
+    max-width: 10%;
+    margin-top:1%;
+}
+
+.container {
+    margin-left: auto;
+    margin-right:auto;
+}
