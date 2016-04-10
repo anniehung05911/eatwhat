@@ -1,6 +1,9 @@
+*{margin: 0; padding: 0;}
+html {
+    font-family: Arial, Helvetica, "微軟正黑體", sans-serif;
+    font-size: 20px;
+}
 body {
-    margin:0;
-    padding:0;
     background: url(../images/background.jpg) center center fixed no-repeat;
     background-size: cover;
     background-color: #ffffcc;
@@ -19,5 +22,35 @@ header img {
 
 .container {
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
+}
+
+article .container {
+    width: 800px;
+    height: 375px;
+}
+
+article .container>* {
+    display: block;
+    float: left;
+}
+
+article img {
+    width: 47%;
+    height: inherit;
+    border: solid 7px rgba(237, 125, 49, 0.6);
+    box-sizing: border-box;
+}
+
+article .container>div {
+    width: 6%;
+    height: inherit;
+    
+}
+
+article .midline {
+    background-color: #ed7d31;
+    width: 17%;
+    height: inherit;
+    margin: auto;
 }
