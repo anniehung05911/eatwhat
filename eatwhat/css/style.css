@@ -54,7 +54,7 @@ article .midline {
     margin: auto;
 }
 
-article .container>.reset-circle {
+article .container>.circle {
     width: 100px;
     height: 100px;
     background-color: #ed7d31;
@@ -71,7 +71,7 @@ article .container>.reset-circle {
     
 }
 
-article .container>.reset-circle img {
+article .container>.circle img {
     width:70%;
     height:auto;
     vertical-align: middle;
