@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>欸!吃什麼</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider_scroll.css">
+    
+    <!--改成js檔-->
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+    <script type='text/javascript'>
+    $(function(){
+        var w = $("#mwt_slider_content").width();
+	    $("#mwt_slider_content").css('height', ($(window).height() - 20) + 'px' ); //將區塊自動撐滿畫面高度
+	
+        $("#mwt_fb_tab").mouseover(function(){ //滑鼠滑入時
+		if ($("#mwt_mwt_slider_scroll").css('left') == '-'+w+'px')
+		{
+			$("#mwt_mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
+		}
+	});
+	
+	
+	   $("#mwt_slider_content").mouseleave(function(){　//滑鼠離開後
+       $("#mwt_mwt_slider_scroll").animate( { left:'-'+w+'px' }, 600 ,'swing');	
+	});	
+    });
+
+    </script>
+    <!-- 改成js檔end -->
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" alt="logo"/>
+        </header>
+       
+        <div id="mwt_mwt_slider_scroll">
+            <div id="mwt_fb_tab">
+                <span>M</span>
+                <span>E</span>
+                <span>N</span>
+                <span>U</span>
+            </div>
+            <div id="mwt_slider_content">
+                <a href="#">全部美食</a><br>
+                <a href="#">北科優惠</a><br>
+                <a href="#">統計排名</a><br>
+                <a href="#">關於我們</a>
+            </div>
+        </div>
+        
+        <article>
+            <div class="container">
+                <img src="images/cake01.jpg" alt="">
+                <div><div class="midline"></div></div>
+                <img src="images/cake02.jpg" alt="">
+                <div class="reset-circle"><img src="images/reset.png" alt="reset"></div>
+            </div>
+        </article>
+    </div><!-- container -->
+    <script type='text/javacript' src="js/script.js"></script>
+   
+    <!--js放最下面-->
+</body>
+</html>
