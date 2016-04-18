@@ -30,27 +30,41 @@ article .container {
     position: relative;
 }
 
-article .container>* {
+article .pic-bg, .midline{
     display: block;
     float: left;
+    height: inherit;
 }
 
-article img {
+article .pic-bg {
     width: 47%;
-    height: inherit;
-    border: solid 7px rgba(237, 125, 49, 0.6);
-    box-sizing: border-box;
+    background-color: rgba(237, 125, 49, 0.6);
 }
-
-article .container>div {
-    width: 6%;
+/*
+article .list-pic {
+    border: solid 7px rgba(255, 255, 255, 0);
+    box-sizing: border-box;
     height: inherit;
+}*/
+
+article .left-pic, .right-pic {
+  width: 361px;
+  height: 361px;
+  margin-top: 7px;
+  margin-left: 7px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 article .midline {
-    background-color: #ed7d31;
+    width: 6%;
+}
+
+article .the-line {
     width: 17%;
     height: inherit;
+    background-color: #ed7d31;
     margin: auto;
 }
 
@@ -66,14 +80,16 @@ article .container>.circle {
     margin-top: -50px;
     line-height:100px;
     text-align:center;
-    /*color: white;
-    font-size: 300%;*/
-    
+    cursor: pointer;
+    -webkit-filter: drop-shadow(3px 3px 1px rgba(106, 55, 21, 0.6));
+    filter: drop-shadow(3px 3px 1px rgba(106, 55, 21, 0.6));
 }
 
 article .container>.circle img {
-    width:70%;
+    width:40%;
     height:auto;
     vertical-align: middle;
     border:none;
+    -webkit-filter: drop-shadow(3px 3px 1px rgba(106, 55, 21, 0.7));
+    filter: drop-shadow(3px 3px 1px rgba(106, 55, 21, 0.7));
 }
