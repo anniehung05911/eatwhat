@@ -5,7 +5,8 @@ $(function(){
                    'images/Amin/Amin3.jpg',
                    'images/Amin/Amin4.jpg',
                    'images/Amin/Amin5.jpg',
-                   'images/Amin/Amin6.jpg'];
+                   'images/Amin/Amin6.jpg',
+                   'images/Amin/Amin7.jpg'];
     
     var i;
     
