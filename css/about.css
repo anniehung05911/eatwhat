@@ -1,19 +1,19 @@
 article .container {
-    margin-top: 50px;
+    margin: 50px auto;
     width: 62.5%;
-    
-    /* FF3.6-15 */
-    background: -moz-linear-gradient(45deg, rgba(92, 164, 169, 0.8) 25%, rgba(117, 216, 175, 0.8) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: -webkit-linear-gradient(45deg, rgba(92, 164, 169, 0.8) 25%, rgba(117, 216, 175, 0.8) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    background: linear-gradient(45deg, rgba(92, 164, 169, 0.8) 25%, rgba(117, 216, 175, 0.8) 100%);
+    height: 500px;
 }
 
 .left-pic, .right-pic {
-    height: 375px;
+    height: inherit;
     width: 50%;
     float: left;
-    padding: 7px;
     box-sizing: border-box;
+}
+.left-pic {
+	border: 7px solid rgba(92, 164, 169, 0.8);
+}
+
+.right-pic {
+	border: 7px solid rgba(117, 216, 175, 0.8);
 }

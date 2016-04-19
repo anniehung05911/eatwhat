@@ -1,7 +1,8 @@
-﻿*{margin: 0; padding: 0;}
+*{margin: 0; padding: 0;}
 html {
     font-family: Arial, Helvetica, "微軟正黑體", sans-serif;
     font-size: 20px;
+    position: relative;
 }
 body {
     background: url(../images/background.jpg) center center fixed no-repeat;
@@ -22,4 +23,12 @@ header img {
 .container {
     margin-left: auto;
     margin-right: auto;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 40%;
+    color: gray;
 }
