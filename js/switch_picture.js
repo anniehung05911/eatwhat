@@ -1,43 +1,59 @@
 $(function(){
     
-    var picList = ['images/food01.jpg',
-                   'images/food02.jpg',
-                   'images/food03.jpg',
-                   'images/food04.jpg',
-                   'images/food05.jpg',
-                   'images/food06.jpg',
-                   'images/food07.jpg',
-                   'images/food08.jpg',
-                   'images/food09.jpg',
-                   'images/food10.jpg',
-                   'images/food11.jpg',
-                   'images/food12.jpg',
-                   'images/food13.jpg',
-                   'images/food14.jpg'];
+    var imagePath = "images/food/";
+    var picList = [imagePath+'food1.jpg',
+                   imagePath+'food2.jpg',
+                   imagePath+'food3.jpg',
+                   imagePath+'food4.jpg',
+                   imagePath+'food5.jpg',
+                   imagePath+'food6.jpg'];
+    var nameList = ["佐賀丼飯",
+                    "I'm Pasta",
+                    "元富小吃",
+                    "Hi Burger 美式漢堡餐廳",
+                    "光華紅豆餅",
+                    "咖食堂"];
     
-    var i;
+    var i = getRandomInt(0,picList.length-1);
+    var j = getRandomInt(0,picList.length-1);
     
     // Show the initial images
-    refreshImage('.left-pic');
-    refreshImage('.right-pic');
+    refreshLeft();
+    refreshRight();
     
     // Click the refresh circle to change both the images
     $('article .circle').click(function(){
-        refreshImage('.left-pic');
-        refreshImage('.right-pic');
+        refreshLeft();
+        refreshRight();
     });
     
     $('.left-pic').click(function(){
-        refreshImage(this);
+        refreshLeft();
     });
     
     $('.right-pic').click(function(){
-        refreshImage(this);
+        refreshRight();
     });
     
-    function refreshImage(which){
+    function refreshLeft(){
         i = getRandomInt(0,picList.length-1);
-        $(which).css("background-image", "url(" + picList[i] + ")");
+        if(i==j){
+            i = getRandomInt(0,picList.length-1);
+        }else{
+            $('.left-pic').css("background-image", "url(" + picList[i] + ")");
+            $('.left-pic p').empty().append(nameList[i]);
+        }
+        
+    }
+    
+    function refreshRight(){
+        j = getRandomInt(0,picList.length-1);
+        if(j==i){
+            j = getRandomInt(0,picList.length-1);
+        }else{
+            $('.right-pic').css("background-image", "url(" + picList[j] + ")");
+            $('.right-pic p').empty().append(nameList[j]);
+        }
     }
   
     function getRandomInt(min, max){
