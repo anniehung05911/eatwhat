@@ -2,11 +2,18 @@
 <html>
 <head>
 <meta charset="utf-8">
+<!-- 滑鼠滾動 -->
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<!-- 滑鼠滾動end -->
     <title>欸!吃什麼</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slider_scroll.css">
     <link rel="stylesheet" href="css/menu.css">
-    
+<!-- 滑鼠滾動 -->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="js/coupon_mouse.js"></script>
+    <link rel="stylesheet" href="css/coupon_mouse.css">
+<!-- 滑鼠滾動end -->
 </head>
 <body>
     <div class="container">
@@ -27,10 +34,92 @@
             </div>
         </div>
         
-        <div class="copyright">&copy; designed by HSIEH and NIMO</div>
+         <!-- 滑鼠滑動 -->
+    <div class="section-wrap">
+		<div class="section section-1">
+		<div align="center"><!-- 第一頁地圖 -->
+        <iframe src="https://www.google.com/maps/d/embed?mid=1FYgNj7r0QB-bvfKd5N6nZAO0Ynw" width="70%" height="400" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+        </div></div>
+		<div class="section section-2"><!-- 第二頁東西放這 -->
+           <div align="center">
+           <img src="images/coupon-1.jpg" width="70%"> 
+           </div>
+        </div>
+        <div class="section section-3"><!-- 第三頁東西放這 -->
+           <div align="center">
+           <img src="images/coupon-2.jpg" width="70%">
+            </div>
+        </div>
+    </div><!--section-wrap end-->
+	<ul class="section-btn">
+	  <li class="cur">1</li>
+	  <li>2</li>
+      <li>3</li>
+	</ul>
+	<div class="go-btn">&laquo;</div>
+    <!-- 滑鼠滑動 -->
+        
     </div><!-- container -->
+   
        
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="js/menu.js"></script>
+    <script src= "js/coupon_mouse2.js">
+    
 </body>
+<script>
+	$(function(){
+		var btn_index=0;
+		/*右边按钮点击*/
+		$('.section-btn li').each(function(index) {
+			$(this).click(function(){
+				btn_index=index;
+				scroller();
+			})
+		});
+		/*翻页按钮点击*/
+		$('.go-btn').one('click',btn_go);
+		function btn_go(){
+			go_up();scroller();	
+			setTimeout(function(){$('.go-btn').one('click',btn_go)},1000)
+		};
+		/*响应鼠标*/
+		$('.section-wrap').one('mousewheel',mouse_);
+		function mouse_(event){
+			if (event.deltaY<0) {go_up()}
+			else{go_down()}
+			scroller();
+			setTimeout(function(){$('.section-wrap').one('mousewheel',mouse_)},1000)
+		};
+		
+		/*当前页面赋值*/
+		function go_up(){btn_index++;if(btn_index==$('.section-btn li').length){btn_index=$('.section-btn li').length-1};}
+		function go_down(){btn_index--;if(btn_index<0){btn_index=0};}
+		
+		/*页面滑动*/
+		function scroller(){
+			$('.section-btn li').eq(btn_index).addClass('cur').siblings().removeClass('cur');	
+			$('.section-wrap').attr("class","section-wrap").addClass(function() {
+					return "put-section-"+btn_index;
+			 }).find('.section').eq(btn_index).find('.title').addClass('active');
+		};
+		
+		/*响应键盘上下键*/
+		$(document).one('keydown',keyaction);
+		function keyaction(event){
+			var e=event||window.event;
+			var key=e.keyCode||e.which||e.charCode;
+			switch(key)	{
+				case 38: go_down();scroller();	
+				break;
+				case 40: go_up();scroller();	
+				break;
+			};
+			setTimeout(function(){$(document).one('keydown',keyaction)},1000)
+		}
+		
+		
+	})
+
+</script>
 </html>
