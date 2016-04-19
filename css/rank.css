@@ -1,6 +1,6 @@
 article .container {
     width: 60%;
-    margin: 25px auto 50px auto;
+    margin: 50px auto;
 }
 
 a{text-decoration: none;}
@@ -14,7 +14,7 @@ article li {
     color: #4a4253;
     font-weight: bold;
     background-color: #F4F1BB;
-    line-height: 2.5em;
+    line-height: 50px;
     box-shadow: 4px 4px 10px rgba(72, 39, 17, 0.5);
 }
 
@@ -38,13 +38,13 @@ ul>:first-child li img {width: 30px;}
 ul>:nth-child(2) li{
     background-color: #458e93;
     height: 80px;
-    line-height: 4em;
+    line-height: 80px;
     color: white;
 }
 
 ul>:nth-child(3) li{
     background-color: #9BC1BC;
     height: 64px;
-    line-height: 3em;
+    line-height: 64px;
     color: white;
 }

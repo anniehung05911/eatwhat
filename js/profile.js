@@ -9,17 +9,26 @@ $(function(){
                    'images/Amin/Amin7.jpg'];
     
     var i;
+    i = getRandomInt(0, picList.length-1);
+    $('.left-pic').css("background-image","url(" + picList[i] + ")");
+    $('.right-pic').css("background-image","url(images/MrFrog.jpg)");
     
-    // Show the initial images
-    refreshImage('.left-pic');
+    $('.left-pic').mouseenter(function(){
+        $('.left-pic .about-me').slideDown(400,"swing");
+    });
     
-    $('.right-pic').css("background-image", "url(images/MrFrog.jpg)");
-
-    function refreshImage(which){
-        i = getRandomInt(0,picList.length-1);
-        $(which).css("background-image", "url(" + picList[i] + ")");
-    }
-  
+    $('.left-pic').mouseleave(function(){
+        $('.left-pic .about-me').slideUp(400,"swing");
+    });
+    
+    $('.right-pic').mouseenter(function(){
+        $('.right-pic .about-me').slideDown(400,"swing");
+    });
+    
+    $('.right-pic').mouseleave(function(){
+        $('.right-pic .about-me').slideUp(400,"swing");
+    });
+    
     function getRandomInt(min, max){
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }

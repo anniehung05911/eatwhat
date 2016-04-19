@@ -9,11 +9,23 @@ article .container {
     width: 50%;
     float: left;
     box-sizing: border-box;
+    position: relative;
 }
+
 .left-pic {
 	border: 7px solid rgba(92, 164, 169, 0.8);
 }
 
 .right-pic {
 	border: 7px solid rgba(117, 216, 175, 0.8);
+}
+
+.about-me {
+    height: 80px;
+    background-color: #ffcccc;
+    box-sizing: border-box;
+    display: none;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
 }
