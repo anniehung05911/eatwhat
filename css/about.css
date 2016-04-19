@@ -1,13 +1,16 @@
 article .container {
     margin: 50px auto;
-    width: 62.5%;
+    width: 66%;
     height: 500px;
 }
 
+article .container>* {float: left;}
+
+.space {width: 6%; height: inherit;}
+
 .left-pic, .right-pic {
     height: inherit;
-    width: 50%;
-    float: left;
+    width: 47%;
     box-sizing: border-box;
     position: relative;
 }
@@ -22,10 +25,12 @@ article .container {
 
 .about-me {
     height: 80px;
-    background-color: #ffcccc;
     box-sizing: border-box;
     display: none;
     color: white;
     text-align: center;
     padding-top: 15px;
 }
+
+.left-pic .about-me {background-color: rgba(111, 189, 195, 0.8);}
+.right-pic .about-me {background-color: rgba(161, 237, 206, 0.8);}
