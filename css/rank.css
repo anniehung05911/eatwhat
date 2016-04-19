@@ -13,9 +13,15 @@ article li {
     padding-left: 30px;
     color: #4a4253;
     font-weight: bold;
-    border-radius: 50px;
     background-color: #F4F1BB;
     line-height: 2.5em;
+    box-shadow: 4px 4px 10px rgba(72, 39, 17, 0.5);
+}
+
+article li:hover {
+    position: relative;
+    top: -5px;
+    left: -5px;
 }
 
 article span{margin-right: 35px;}
