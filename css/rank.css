@@ -1,0 +1,39 @@
+article .container {
+    width: 60%;
+    margin: 25px auto 50px auto;
+}
+
+a{text-decoration: none;}
+
+article li {
+    list-style: none;
+    margin-top: 25px;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+article span{margin-right: 35px;}
+
+ul>:first-child li{
+    background-color: #ED6A5A;
+    height: 100px;
+    line-height: 5em;
+}
+
+ul>:first-child li img {width: 30px;}
+
+ul>:nth-child(2) li{
+    background-color: #458e93;
+    height: 80px;
+    line-height: 4em;
+}
+
+ul>:nth-child(3) li{
+    background-color: #F4F1BB;
+    color: #4a4253;
+    height: 64px;
+    line-height: 3em;
+}
