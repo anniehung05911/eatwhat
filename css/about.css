@@ -1,15 +1,14 @@
 article .container {
     margin: 50px auto;
     width: 66%;
-    height: 500px;
+    height: 50%;
 }
 
-article .container>* {float: left;}
+article .container>* {float: left; height: inherit;}
 
-.space {width: 6%; height: inherit;}
+.space {width: 6%;}
 
 .left-pic, .right-pic {
-    height: inherit;
     width: 47%;
     box-sizing: border-box;
     position: relative;
