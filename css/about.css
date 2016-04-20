@@ -1,7 +1,6 @@
 article .container {
     margin: 50px auto;
     width: 66%;
-    height: 500px;
 }
 
 article .container>* {float: left;}
