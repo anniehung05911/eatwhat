@@ -27,8 +27,12 @@ article .left-pic, .right-pic {
 
 article .left-pic span, .right-pic span {
     color: white;
+    font-size: 150%;
+    font-weight: lighter;
+    padding: 2px;
     display: none;
     text-align: right;
+    -webkit-filter: drop-shadow(3px 3px 5px rgba(74, 66, 83, 0.6));
 }
 
 article .left-pic:hover span, .right-pic:hover span {
