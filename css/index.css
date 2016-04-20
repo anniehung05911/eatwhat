@@ -25,6 +25,16 @@ article .left-pic, .right-pic {
   background-position: center;
 }
 
+article .left-pic span, .right-pic span {
+    color: white;
+    display: none;
+    text-align: right;
+}
+
+article .left-pic:hover span, .right-pic:hover span {
+    display: block;
+}
+
 article .midline {
     width: 6%;
 }
