@@ -57,12 +57,14 @@ $(function(){
                    imagePath+'food54.jpg',
                    imagePath+'food55.jpg',
                    imagePath+'food56.jpg',
-                   imagePath+'food57.jpg'];
+                   imagePath+'food57.jpg',
+                   imagePath+'food58.jpg',
+                   imagePath+'food59.jpg'];
          
     
     var nameList = ["佐賀丼飯",
                     "I'm Pasta",
-                    "元富小吃 | 建國橋下麵線臭豆腐",
+                    "元富小吃 建國橋下麵線臭豆腐",
                     "Hi Burger 美式漢堡餐廳",
                     "光華紅豆餅",
                     "咖食堂",
@@ -81,7 +83,7 @@ $(function(){
                     "人人素食麵館",
                     "垃圾麵",  //20
                     "70送飲料的阿姨小吃",
-                    "公園後養狗們的小吃",
+                    "揪等小吃",
                     "吉丼",
                     "鴨麵館",
                     "臭臉滷味",  //25
@@ -96,7 +98,7 @@ $(function(){
                     "阿里巴巴手工甩餅專賣店",
                     "五鄉地窯烤披薩",  //35
                     "吃便利商店吧你",
-                    "省錢吃學餐唷",
+                    "省錢吃學餐囉",
                     "甘泉魚麵",
                     "鬍鬚張魯肉飯",
                     "天下一製麵",  //40
@@ -116,7 +118,9 @@ $(function(){
                     "合味拉麵",
                     "王記非常麵",  //55
                     "五味臭臭鍋",
-                    "博多拉麵"];
+                    "博多拉麵",
+                    "麵足飯飽",
+                    "釋道速食賓館 邱媽媽素食專賣店"];
     
     var i = getRandomInt(0,picList.length-1);
     var j = getRandomInt(0,picList.length-1);
