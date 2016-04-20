@@ -13,6 +13,7 @@ article .container>* {float: left;}
     width: 47%;
     box-sizing: border-box;
     position: relative;
+    background-size: cover;
 }
 
 .left-pic {
